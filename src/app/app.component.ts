@@ -25,6 +25,8 @@ export class AppComponent {
 
   onFormSubmitted() {
     console.log(this.form);
+    this.form.reset(); 
+
   }
 
 
@@ -49,8 +51,10 @@ export class AppComponent {
     // console.log(username);
     // this.form.controls["username"].setValue(username);
 
-    this.form.setValue({
-      
+    this.form.form.patchValue({
+      username: username,
     });
+
+    
   }
 }
